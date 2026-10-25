@@ -31,11 +31,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
-                <!-- Avatar Inisial Nama (AS) -->
-
-                <!-- Text Welcome & Nama -->
+                <!-- Avatar Inisial Nama -->
                 <TextView
-                    android:id="@+id/tvAvatar"
+                    android:id="@+id/avatarProfil"
                     android:layout_width="44dp"
                     android:layout_height="44dp"
                     android:layout_marginStart="16dp"
@@ -49,8 +47,9 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
+                <!-- Text Selamat Datang -->
                 <TextView
-                    android:id="@+id/tvWelcome"
+                    android:id="@+id/textSelamatDatang"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="12dp"
@@ -58,11 +57,12 @@
                     android:text="Selamat Datang"
                     android:textColor="@color/biruabu"
                     android:textSize="12sp"
-                    app:layout_constraintStart_toEndOf="@id/tvAvatar"
-                    app:layout_constraintTop_toTopOf="@id/tvAvatar" />
+                    app:layout_constraintStart_toEndOf="@id/avatarProfil"
+                    app:layout_constraintTop_toTopOf="@id/avatarProfil" />
 
+                <!-- Nama Pengguna -->
                 <TextView
-                    android:id="@+id/tvName"
+                    android:id="@+id/Name"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="12dp"
@@ -70,26 +70,8 @@
                     android:text="Aditya Aulia Subhan"
                     android:textColor="@color/card"
                     android:textSize="16sp"
-                    app:layout_constraintStart_toEndOf="@id/tvAvatar"
-                    app:layout_constraintTop_toBottomOf="@id/tvWelcome" />
-
-                <!-- Icon Logout -->
-                <FrameLayout
-                    android:id="@+id/btnLogout"
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:background="@color/transparan"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toTopOf="parent">
-
-                    <ImageView
-                        android:layout_width="20dp"
-                        android:layout_height="20dp"
-                        android:layout_gravity="center"
-                        android:src="@drawable/ic_logout"
-                        app:tint="@color/card" />
-
-                </FrameLayout>
+                    app:layout_constraintStart_toEndOf="@id/avatarProfil"
+                    app:layout_constraintTop_toBottomOf="@id/textSelamatDatang" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
         </androidx.appcompat.widget.Toolbar>
@@ -110,9 +92,9 @@
             android:layout_height="wrap_content"
             android:paddingBottom="32dp">
 
-            <!-- Card Banner Musrenbang -->
+            <!-- Card Musrenbang -->
             <com.google.android.material.card.MaterialCardView
-                android:id="@+id/cardVoting"
+                android:id="@+id/cardMusrenbang"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="16dp"
@@ -137,7 +119,7 @@
                         android:layout_height="wrap_content">
 
                         <TextView
-                            android:id="@+id/tvVotingStatus"
+                            android:id="@+id/textStatusVoting"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:background="@color/transparan"
@@ -159,7 +141,7 @@
                             android:textSize="13sp" />
                     </RelativeLayout>
 
-                    <!-- Judul banner -->
+                    <!-- Judul Banner -->
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -260,7 +242,7 @@
                                 android:textSize="11sp" />
                         </LinearLayout>
 
-                        <!-- Detik (Kuning Highlight) -->
+                        <!-- Detik -->
                         <LinearLayout
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
@@ -324,9 +306,9 @@
                         android:progress="33"
                         android:progressDrawable="@color/kuninggelap" />
 
-                    <!-- Tombol Beri Suara -->
+                    <!-- Button Beri Suara -->
                     <com.google.android.material.button.MaterialButton
-                        android:id="@+id/btnBeriSuara"
+                        android:id="@+id/buttonBeriSuara"
                         android:layout_width="match_parent"
                         android:layout_height="54dp"
                         android:layout_marginTop="20dp"
@@ -341,9 +323,62 @@
                 </LinearLayout>
             </com.google.android.material.card.MaterialCardView>
 
-            <!-- Stats Section (3 Card) -->
+            <!-- Card Portal Web -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardPortalWeb"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="16dp"
+                app:cardBackgroundColor="@color/card"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="2dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/cardMusrenbang"
+                app:strokeWidth="0dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_bold"
+                        android:text="Portal Informasi Publik"
+                        android:textColor="@color/navy"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:fontFamily="@font/poppins_regular"
+                        android:text="Akses langsung web resmi e-Musrenbang untuk melihat transparansi perencanaan pembangunan."
+                        android:textColor="@color/abuabu"
+                        android:textSize="12sp" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/buttonBukaPortal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:backgroundTint="@color/ungu"
+                        android:fontFamily="@font/poppins_bold"
+                        android:text="Buka Portal e-Musrenbang"
+                        android:textAllCaps="false"
+                        app:cornerRadius="8dp" />
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Layout Statistik -->
             <LinearLayout
-                android:id="@+id/layoutStats"
+                android:id="@+id/layoutStatistik"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="16dp"
@@ -351,7 +386,7 @@
                 android:orientation="horizontal"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/cardVoting">
+                app:layout_constraintTop_toBottomOf="@id/cardPortalWeb">
 
                 <!-- Card Usulan -->
                 <com.google.android.material.card.MaterialCardView
@@ -463,9 +498,9 @@
 
             </LinearLayout>
 
-            <!-- Section Kategori -->
+            <!-- Judul Kategori -->
             <TextView
-                android:id="@+id/tvKategoriTitle"
+                android:id="@+id/textJudulKategori"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
@@ -475,11 +510,11 @@
                 android:textColor="@color/navy"
                 android:textSize="18sp"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/layoutStats" />
+                app:layout_constraintTop_toBottomOf="@id/layoutStatistik" />
 
             <!-- Grid Kategori Item -->
             <LinearLayout
-                android:id="@+id/layoutKategoriItems"
+                android:id="@+id/layoutGridKategori"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="16dp"
@@ -487,7 +522,7 @@
                 android:orientation="horizontal"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/tvKategoriTitle">
+                app:layout_constraintTop_toBottomOf="@id/textJudulKategori">
 
                 <!-- Item 1: Jalan -->
                 <LinearLayout

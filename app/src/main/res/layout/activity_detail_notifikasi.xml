@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backround"
+    android:orientation="vertical"
+    tools:context=".Notifikasi.DetailNotifikasiActivity">
+
+    <!-- Toolbar Utama -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/hijaugradient"
+        app:titleTextColor="@color/card" />
+
+    <!-- Isi Notifikasi -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <TextView
+            android:id="@+id/textJudulNotifikasi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_bold"
+            android:text="Judul Notifikasi"
+            android:textColor="@color/navy"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/textTanggalNotifikasi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:fontFamily="@font/poppins_regular"
+            android:text="25 Oktober 2026 • 10:00 WIB"
+            android:textColor="@color/biruabu"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/textPesanNotifikasi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/poppins_regular"
+            android:lineSpacingExtra="4dp"
+            android:text="Isi pesan notifikasi"
+            android:textColor="@color/navy"
+            android:textSize="14sp" />
+
+    </LinearLayout>
+
+</LinearLayout>

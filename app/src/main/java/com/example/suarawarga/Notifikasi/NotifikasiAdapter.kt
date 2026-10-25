@@ -1,6 +1,7 @@
 package com.example.suarawarga.Notifikasi
 
 import android.content.Context
+import android.content.Intent
 import android.content.res.ColorStateList
 import android.view.LayoutInflater
 import android.view.View
@@ -20,6 +21,15 @@ class NotifikasiAdapter(
         val view = binding.root
         val data = listNotif[position]
 
+        view.setOnClickListener {
+            val intent = Intent(context, DetailNotifikasiActivity::class.java).apply {
+                putExtra("JUDUL", data.title)
+                putExtra("PESAN", data.description)
+                putExtra("TANGGAL", data.time)
+            }
+            context.startActivity(intent)
+        }
+
         binding.TitleNotif.text = data.title
         binding.DescNotif.text = data.description
         binding.TimeNotif.text = data.time
@@ -31,9 +41,6 @@ class NotifikasiAdapter(
         binding.IconNotif.backgroundTintList = ColorStateList.valueOf(
             ContextCompat.getColor(context, R.color.biruabu)
         )
-
-        view.setOnClickListener {
-        }
 
         return view
     }

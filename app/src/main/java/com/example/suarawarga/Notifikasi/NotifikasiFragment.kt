@@ -89,4 +89,6 @@ class NotifikasiFragment : Fragment() {
         binding.listNotifikasiItems.adapter = adapter
     }
 
+
+
 }

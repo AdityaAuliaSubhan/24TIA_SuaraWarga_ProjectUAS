@@ -30,6 +30,9 @@ class LoginActivity : AppCompatActivity() {
             val user = binding.edtusername.text.toString()
             val pass = binding.edtpassword.text.toString()
 
+
+
+
             if (user.isNotEmpty() && user == pass) {
                 val editor = sharedPref.edit()
                 editor.putBoolean("isLogin", true)
